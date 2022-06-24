@@ -30,19 +30,22 @@ const MovieDetails = () => {
       <div className="inline">
         <div className="movieDetails-list">
           <h4 className="info">
-            <b>Genre: </b> {movie?.genres[0]?.name}, {movie?.genres[1]?.name},{" "}
-            {movie?.genres[2]?.name}
+            <i class="far fa-camera-movie"></i> {movie?.genres[0]?.name},{" "}
+            {movie?.genres[1]?.name}, {movie?.genres[2]?.name}
           </h4>
         </div>
         <div className="movieDetails-list">
           <h4 className="info">
-            <b>Lenguages: </b> {movie?.spoken_languages[0]?.iso_639_1},{" "}
+            <i class="fas fa-language fa-lg"></i>
+            {movie?.spoken_languages[0]?.iso_639_1},{" "}
             {movie?.spoken_languages[1]?.iso_639_1},{" "}
             {movie?.spoken_languages[2]?.iso_639_1}
           </h4>{" "}
         </div>
       </div>
-      <h3 className="movieDetails-duration">Duration : {movie?.runtime} Min</h3>
+      <h3 className="movieDetails-duration">
+        <i class="fas fa-clock "></i> {movie?.runtime} Min
+      </h3>
     </div>
   );
 };

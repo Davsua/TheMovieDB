@@ -169,14 +169,16 @@ button:hover{
   border: solid 1px gray;
   padding: 10px 30px;
   justify-content: center;
+  font-size: 19px;
 }
+
+
 
 .movieDetails-duration{
   border: 1px solid gray;
-  min-width: 280px;
   width: 280px;
   margin: auto;
-  padding: 20px 30px;
+  padding: 25px 30px;
 }
 
 .list-title{
@@ -201,6 +203,7 @@ button:hover{
   padding-top: 20px;
 }
 
-.footer i {
+i {
   margin-right: 5px;
+  color: aliceblue;
 }
