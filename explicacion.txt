@@ -1,0 +1,13 @@
+the API was consumed succesfully, the principal page shows the most 20 popular movies
+the search box (searchBox) takes the query that user writes there and show the coincidences ( max20 )
+when a search is performed, it only shows the coincidences, popular movies dissapear 
+movie cards have some information and additional they have a link (show more) to see more details
+/details/id --> shows details like overview, duration and more
+star filter only works with the coincidences of a search
+footer contains git hub link
+
+
+the design is a minimalist design and i think is really friendly with the user
+i use some librarys like: react-router-dom, react-rating-stars-component
+i use font awesome for the github icon
+i use axios to make the request
