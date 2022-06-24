@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState } from "react";
+import MovieList from "./components/moviesList";
+import SearchBox from "./components/searchBox";
+
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import MovieDetails from "./components/movieDetails";
+import Header from "./components/header";
+import Footer from "./components/footer";
 
 function App() {
+  const [search, setSearch] = useState(false);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Router>
+        <div>
+          <Routes>
+            <Route
+              exact
+              path="/"
+              element={
+                <>
+                  <SearchBox setSearch={setSearch} />
+                  <MovieList search={search} />
+                </>
+              }
+            ></Route>
+            <Route path="/details/:id" element={<MovieDetails />} />
+          </Routes>
+        </div>
+      </Router>
+      <Footer />
     </div>
   );
 }
