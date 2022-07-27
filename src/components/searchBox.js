@@ -9,6 +9,18 @@ const SearchBox = ({ setSearch }) => {
   const [movies, setMovies] = useState([]); // movies is the array of movies (Almacenamos el array de peliculas que coinciden con la busqeuda en el state)
   const [starFilter, setStarFilter] = useState(3);
 
+  /* const filterMovies = (movie) => {
+    
+    for(let i = 0; i <= movie.length; i++){
+      if (
+        movie.vote_average >= starFilter * 2 - 2 &&
+        movie.vote_average <= starFilter * 2
+      ) {
+        return movie;
+      }
+    }
+  }*/
+
   const handleChange = (e) => {
     e.preventDefault();
     setSearch(true);
@@ -60,6 +72,7 @@ const SearchBox = ({ setSearch }) => {
             ) {
               return movie;
             }
+            return undefined;
           })
           .map((movie) => (
             <>
